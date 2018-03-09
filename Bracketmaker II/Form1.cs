@@ -336,6 +336,18 @@ namespace Bracketmaker_II
                 System.Console.WriteLine("WINNER = **" + a.getName() + "**");
                 return a;
             }
+            if (a.getSeed() > 11 && round <= 8)
+            {
+                System.Console.WriteLine("Special Case: Seeds above 11 never reached final four");
+                System.Console.WriteLine("WINNER = **" + b.getName() + "**");
+                return b;
+            }
+            if (b.getSeed() > 11 && round <= 8)
+            {
+                System.Console.WriteLine("Special Case: Seeds above 11 never reached final four");
+                System.Console.WriteLine("WINNER = **" + a.getName() + "**");
+                return a;
+            }
             //FINAL SCORE PREDICTION
 
             //Find each team's adjusted pace. Multiply these together, and divide by the league average.
